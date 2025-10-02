@@ -33,7 +33,7 @@ src/
     notes.ts        # server functions (CRUD) för notes.json
   routes/
     notes.tsx       # /notes (lista + add)
-    notes.$id.tsx   # /notes/$id (detalj + edit/delete)
+    notes_.$id.tsx   # /notes/$id (detalj + edit/delete)
   utils/
     notes.ts        # queryOptions & hjälpfunktioner
 notes.json          # lagringsfil
@@ -81,9 +81,8 @@ Använd följande hjälpfunktioner i `src/api/notes.ts`:
 
 ```ts
 import fs from "fs/promises";
-import path from "path";
 
-const filePath = path.resolve("notes.json");
+const filePath = "notes-file.json";
 
 export type Note = {
   id: number;
