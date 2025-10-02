@@ -28,7 +28,7 @@ Efter workshopen ska du kunna:
 ## Strukturskiss
 
 ```
-app/
+src/
   api/
     notes.ts        # server functions (CRUD) för notes.json
   routes/
@@ -75,7 +75,7 @@ Skapa en `notes.json` i projektets rot:
 [{ "id": 1, "title": "Första noten", "body": "Hej!", "favorite": false }]
 ```
 
-Använd följande hjälpfunktioner i `app/api/notes.ts`:
+Använd följande hjälpfunktioner i `src/api/notes.ts`:
 
 ```ts
 import fs from "fs/promises";
@@ -114,10 +114,12 @@ Nu kan du använda `readNotes()` och `writeNotes()` i dina server functions för
 
 Genom att samla våra query-definitions på ett ställe blir det enklare att återanvända.
 
-- I `app/utils/notes.ts`:
+- I `src/utils/notes.ts`:
   - Skapa `notesListQueryOptions` för listan.
   - Skapa `noteByIdQueryOptions(id)` för en specifik note.
   - (Valfritt) Lägg till hjälpfunktioner för `prefetchQuery` och `invalidateNotes`.
+
+Titta på hur `src/utils/posts.ts` ser ut och på samma sätt.
 
 ---
 
@@ -125,7 +127,7 @@ Genom att samla våra query-definitions på ett ställe blir det enklare att åt
 
 Nu ska vi visa listan i UI:t, med data som laddas på servern.
 
-- Skapa `app/routes/notes.tsx`.
+- Skapa `src/routes/notes.tsx`.
 - Loader: använd `ensureQueryData(notesListQueryOptions)` → då ligger datan redan i cachen när komponenten mountas.
 - I komponenten:
   - `const { data: notes } = useSuspenseQuery(notesListQueryOptions)`
