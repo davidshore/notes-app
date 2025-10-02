@@ -130,9 +130,9 @@ Titta på hur `src/utils/posts.ts` ser ut och gör på liknande sätt.
 Nu ska vi visa listan i UI:t, med data som laddas på servern.
 
 - Skapa `src/routes/notes.tsx`.
-- Loader: använd `ensureQueryData(notesListQueryOptions)` → då ligger datan redan i cachen när komponenten mountas.
+- Loader: använd `ensureQueryData(notesListQueryOptions())` → då ligger datan redan i cachen när komponenten mountas.
 - I komponenten:
-  - `const { data: notes } = useSuspenseQuery(notesListQueryOptions)`
+  - `const { data: notes } = useSuspenseQuery(notesListQueryOptions())`
   - Rendera en lista. Varje titel länkar till `/notes/$id`.
 
 **Testa:** Navigera till `/notes` och se att listan visas direkt utan “flash of loading”.
