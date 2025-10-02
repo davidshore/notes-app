@@ -65,6 +65,8 @@ npm install
 npm run dev
 ```
 
+Titta på hur routes för posts är uppbyggd i start-projektet. Ni kommer att använda liknande struktur för notes.
+
 ---
 
 ### Steg 1 — Hjälpfunktioner för JSON-fil
