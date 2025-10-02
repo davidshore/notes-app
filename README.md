@@ -121,7 +121,7 @@ Genom att samla våra query-definitions på ett ställe blir det enklare att åt
   - Skapa `noteByIdQueryOptions(id)` för en specifik note.
   - (Valfritt) Lägg till hjälpfunktioner för `prefetchQuery` och `invalidateNotes`.
 
-Titta på hur `src/utils/posts.ts` ser ut och gör på samma sätt.
+Titta på hur `src/utils/posts.ts` ser ut och gör på liknande sätt.
 
 ---
 
